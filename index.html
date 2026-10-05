@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+<h2>Actividad 8: Practica el uso del DOM</h2> 
+
+<input type="email" id="email" placeholder="Correo electrónico">
+<input type="tel" id="telefono" placeholder="Teléfono">
+
+<button onclick ="Enviar()">Enviar</button>
+<button id="677" disabled onclick ="Registrarse()">Registrarse</button>
+
+<p id="79">Ingresa tu email o Tu Numero de telefono</p>
+<p id="Resultado"></p>
+
+<script>
+    function Enviar() {
+        let email1 = document.getElementById("email").value;
+        let tel1 = document.getElementById("telefono").value;
+        let Desabilitado = document.getElementById("677");
+        let PrimerP = document.getElementById("79");
+
+        if (email1 || tel1) {
+            PrimerP.innerHTML = "Tus Datos Ingresado es correcto!";
+            Desabilitado.disabled = false;
+        }
+        else {
+            PrimerP.innerHTML = "Tus Datos Ingresados son Incorrectos";
+            Desabilitado.disabled = true;
+        }
+    }
+    function Registrarse() {
+        document.getElementById("Resultado").innerHTML = "Te Has Registrado Correctamente";
+    }
+    
+</script>
+</body>
+</html>
